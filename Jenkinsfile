@@ -14,7 +14,6 @@ pipeline {
     post {
         always {
             echo 'Done with always'
-            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
             junit 'build/reports/**/*.xml'
         }
         success {
