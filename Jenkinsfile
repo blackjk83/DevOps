@@ -14,7 +14,6 @@ pipeline {
     post {
         always {
             echo 'Done with always'
-            junit '/jobs/MyPipeLine/branches/master/builds/*/*.xml'
         }
         success {
             echo 'Successful build'
