@@ -14,7 +14,7 @@ pipeline {
     post {
         always {
             echo 'Done with always'
-            junit '**/test-reports/*.xml'
+            junit 'results/*.xml'
         }
         success {
             echo 'Successful build'
