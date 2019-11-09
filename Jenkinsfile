@@ -11,5 +11,22 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'Done with always'
+        }
+        success {
+            echo 'Successful build'
+        }
+        failure {
+            echo 'Failed build'
+        }
+        unstable {
+            echo 'Unstable build'
+        }
+        changed {
+            echo 'Some change were made...'
+        }
+    }
 }
 
