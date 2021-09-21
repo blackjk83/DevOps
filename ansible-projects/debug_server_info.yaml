@@ -1,0 +1,21 @@
+---
+
+- hosts: localhost
+  vars:
+    users:
+      - name: 'jacob'
+
+  tasks:
+  - name: Show free space on home dir
+    command: df ~ -h --output=pcent
+    become: yes
+    become_user: "{{ item.name }}"
+    loop: "{{ users }}"
+    register: df_results
+
+  - name: print sd result
+    debug:
+      msg: "DF result from {{ item.user.0.name }}: {{ item.df_rc[0].stdout_lines }}"
+    loop:
+      - { user: "{{ users }}", df_rc: "{{ df_results.results }}" }
+    
