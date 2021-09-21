@@ -1,0 +1,5 @@
+copy the file to:
+/lib/firmware/brcm/brcmfmac43455-sdio.txt
+cp 4345r6nvram.txt /lib/firmware/brcm/brcmfmac43455-sdio.txt
+Reboot 
+
