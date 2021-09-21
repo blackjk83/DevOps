@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "# will contain scripts for bash promp, vim, git status, etc..."
